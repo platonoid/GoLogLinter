@@ -32,17 +32,20 @@ GOOS=windows GOARCH=amd64 go build -o loggerlint.exe ./cmd/loggerlint
 ## Проверка работы бинарника
 
 Запуск без аргументов:
-
+```bash
 ./loggerlint         # macOS/Linux
 loggerlint.exe       # Windows
+```
 
 Вывод должен быть примерно таким:
+```
 loggerlint is a tool for static analysis of Go programs.
 
 Usage of loggerlint:
         loggerlint unit.cfg     # execute analysis specified by config file
         loggerlint help         # general help, including listing analyzers and flags
         loggerlint help name    # help on specific analyzer and its flags
+```
 
 ## Запуск тестов
 
@@ -64,4 +67,7 @@ Golangci-lint сам вызовет loggerlint для всех пакетов п
 
 Не нужно добавлять loggerlint в linters.enable.
 
-Запуск проверки всего проекта: golangci-lint run
+Запуск проверки всего проекта: 
+```
+golangci-lint run
+```
