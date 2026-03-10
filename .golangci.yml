@@ -1,0 +1,24 @@
+run:
+  timeout: 5m
+  tests: true
+  issues:
+    exclude-dirs:
+      - "vendor"
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - staticcheck
+    - gosimple
+    - unused
+    - ineffassign
+
+linters-settings:
+  unused:
+    exclude-rules:
+      - path: _/cmd/loggerlint/.*\.go
+        text: "func main"
+
+  loggerlint:
+    path: ./loggerlint

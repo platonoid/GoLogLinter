@@ -1,0 +1,13 @@
+loggerlint
+*.exe
+*.out
+
+vendor/
+
+.vscode/
+.idea/
+
+.DS_Store
+*.log
+
+*.test

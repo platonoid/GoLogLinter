@@ -1,0 +1,31 @@
+loggers:
+  slog:
+    package: log/slog
+    methods:
+      - Debug
+      - Info
+      - Warn
+      - Error
+
+  zap:
+    package: go.uber.org/zap
+    methods:
+      - Debug
+      - Info
+      - Warn
+      - Error
+      - DPanic
+      - Panic
+      - Fatal
+      - Debugf
+      - Infof
+      - Warnf
+      - Errorf
+
+rules:
+  sensitive_data:
+    patterns:
+      - password
+      - token
+      - secret
+      - api[_-]?key
